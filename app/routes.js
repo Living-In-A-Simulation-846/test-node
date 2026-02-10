@@ -1,5 +1,7 @@
 const app = require("../app");
 
-app.get('/', (req, res, next) => {
-    res.send('Root path working!')
-})
+module.exports = function loadRoutes(app) {
+    app.get("/", (req, res, next) => {
+        res.send("Root path working!");
+    });
+}
